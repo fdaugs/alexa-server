@@ -4,6 +4,7 @@ const LOCAL = false;
 
 const port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080
 const ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0'
+const debug = process.env.DEBUG || true;
 
 if (LOCAL) {
   require('alexa-home-server').start({
@@ -16,7 +17,7 @@ if (LOCAL) {
   const server = new AppServer({
     server_root: __dirname,
     port: port,
-    debug:true,
+    debug:debug,
     host: ip
   });
   server.start();

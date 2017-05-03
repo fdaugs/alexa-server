@@ -8,11 +8,12 @@ module.change_code = 1;
 
 //Configure slots and utterances
 var config = {
+
 }
 
 //Handle the Intent
 var handler = function(req, res){
-    res.say('<say-as interpret-as="interjection">klar</say-as>');
+    res.say('Sage zum Beispiel: "Licht an"');
     res.shouldEndSession(false);
 }
 

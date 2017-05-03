@@ -12,8 +12,8 @@ var config = {
 
 //Handle the Intent
 var handler = function(req, res){
-    res.say('<say-as interpret-as="interjection">klar</say-as>');
-    res.shouldEndSession(false);
+    res.say('<say-as interpret-as="interjection">tschö</say-as>')
+    res.shouldEndSession(true);
 }
 
 //Export Config and IntentHandler
