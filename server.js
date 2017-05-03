@@ -1,9 +1,9 @@
 const LOCAL = false;
 
-
+const socket = require('./sockets/server');
 
 const port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080
-const ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0'
+const ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '127.0.0.0'
 const debug = process.env.DEBUG || true;
 
 if (LOCAL) {
@@ -12,13 +12,17 @@ if (LOCAL) {
     port: 4000,
     subdomain: 'home'
   });
-}else{
+} else {
   const AppServer = require('alexa-app-server');
   const server = new AppServer({
     server_root: __dirname,
     port: port,
-    debug:debug,
+    debug: debug,
     host: ip
   });
-  server.start();
+  socket.start(server.start());
+  io = socket.getIo();
+  io.on('intent',()=>{
+    console.log('aefaef');
+  })
 }
