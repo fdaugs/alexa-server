@@ -1,0 +1,17 @@
+{
+  "name": "HomeAssistent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "alexa": {
+    "applicationId": "amzn1.ask.skill.40ca2bc3-d510-4a82-9795-4d3df8fc7bfa"
+  },
+  "dependencies": {
+    "alexa-app": "^4.0.0"
+  }
+}
