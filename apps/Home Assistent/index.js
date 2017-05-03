@@ -15,6 +15,7 @@ app.id = require('./package.json').alexa.applicationId;
 app.launch(function (req, res) {
   res.say("Hallo! Was kann ich für dich tun?");
   res.shouldEndSession(false);
+  res.send();
 });
 
 //Load intents from intent-directory

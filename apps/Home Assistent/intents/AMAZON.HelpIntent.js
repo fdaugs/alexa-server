@@ -15,6 +15,7 @@ var config = {
 var handler = function(req, res){
     res.say('Sage zum Beispiel: "Licht an"');
     res.shouldEndSession(false);
+    res.send();
 }
 
 //Export Config and IntentHandler
